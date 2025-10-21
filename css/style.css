@@ -1,0 +1,448 @@
+/*configuracion del body*/
+
+body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+/*esitlo de carrusel
+Tailwind animación personalizada*/
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+.animate-fadeIn {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.animate-gradientText {
+  background-size: 200% 200%;
+  animation: gradientFlow 4s ease infinite;
+}
+
+/* Para mejorar la experiencia del menú desplegable */
+@media (min-width: 768px) {
+  header ul li.group ul {
+    display: none;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+  }
+
+  header ul li.group:hover ul {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* Secciones */
+        .section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #2c3e50;
+            position: relative;
+        }
+
+        .section h2::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: #3498db;
+            margin: 1rem auto;
+        }
+
+        /* Visión y Misión */
+        .vision-mission {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .vision, .mission {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .vision:hover, .mission:hover {
+            transform: translateY(-5px);
+        }
+
+        .vision h3, .mission h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        /* Carreras y Cursos */
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .program-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .program-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .program-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .program-content {
+            padding: 1.5rem;
+        }
+
+        .program-content h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .program-content p {
+            color: #7f8c8d;
+        }
+
+        .program-badge {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Ubicación */
+        .location-section {
+            background: #f8f9fa;
+        }
+
+        .map-container {
+            margin-top: 2rem;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+        }
+
+        /* Formulario */
+        /* Formulario */
+        .contact-form {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin: 2rem auto;
+            max-width: 600px;
+        }
+
+        /* Estructura */
+
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            padding: 0.9rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            background: linear-gradient(135deg, #2980b9, #1f4e79);
+            transform: translateY(-2px);
+        }
+
+        /* Botón de WhatsApp */
+        .whatsapp-button {
+            margin-top: 1.5rem;
+            text-align: center;
+        }
+
+        .whatsapp-button a {
+            display: inline-flex;
+            align-items: center;
+            background-color: #25d366;
+            color: white;
+            padding: 0.7rem 1.2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .whatsapp-button a:hover {
+            background-color: #1ebe5d;
+        }
+
+        .whatsapp-button img {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        /* Botón Hamburguesa */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: white;
+            margin: 3px 0;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+
+        /* Menú móvil */
+        .mobile-menu {
+            position: fixed;
+            top: 80px;
+            left: -100%;
+            width: 100%;
+            height: calc(100vh - 80px);
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            transition: left 0.3s ease;
+            z-index: 999;
+            padding-top: 2rem;
+        }
+
+        .mobile-menu.active {
+            left: 0;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .mobile-menu ul li {
+            margin: 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .mobile-menu ul li a {
+            display: block;
+            padding: 1.5rem 2rem;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: background 0.3s;
+        }
+
+        .mobile-menu ul li a:hover {
+            background: rgba(255,255,255,0.1);
+            color: #f39c12;
+        }
+
+        /* Botón flotante */
+        .floating-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 15px 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(231, 76, 60, 0.4);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        .floating-btn:hover {
+            background: linear-gradient(135deg, #c0392b, #a93226);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(231, 76, 60, 0.6);
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 5px 20px rgba(231, 76, 60, 0.4);
+            }
+            50% {
+                box-shadow: 0 5px 30px rgba(231, 76, 60, 0.8);
+                transform: scale(1.05);
+            }
+            100% {
+                box-shadow: 0 5px 20px rgba(231, 76, 60, 0.4);
+            }
+        }
+
+     /* Responsivo de la pagina principal*/
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .vision-mission {
+                grid-template-columns: 1fr;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .carousel-content h2 {
+                font-size: 1.8rem;
+            }
+
+            .floating-btn {
+                bottom: 20px;
+                right: 20px;
+                padding: 12px 20px;
+                font-size: 0.9rem;
+            }
+            .whatsapp-button a {
+            width: 100%;
+            justify-content: center;
+            }
+            .logo-text {
+                font-size: 1.1rem;
+            }
+        }   
+/* Animaciones de la pagina principal */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        /* Notificación */
+        .notification {
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            background: #27ae60;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            z-index: 1001;
+            transform: translateX(400px);
+            transition: transform 0.3s;
+        }
+
+        .notification.show {
+            transform: translateX(0);
+        }
+        
+        

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <!-- HEADER -->
+  <header class="fixed top-0 left-0 right-0 z-50 shadow-lg bg-gradient-to-r from-[#2c3e50] to-[#3498db] text-white">
+    <nav class="flex justify-between items-center w-full px-6 py-3">
+      
+      <!-- LOGO + TEXTO -->
+      <div class="flex items-center space-x-3">
+        <img src="img/logo.jpeg" alt="Logo" class="w-12 h-12 rounded-full border-2 border-white" />
+        <div class="flex flex-col leading-tight text-white uppercase font-bold">
+          <a href="index.html"><span class="text-xl font-bold uppercase tracking-wide text-white">Instituto Tecnológico Jesús María</span></a>
+          
+        </div>
+      </div>
+
+      <!-- BOTÓN HAMBURGUESA (solo móvil) -->
+      <button id="hamburguesa" aria-label="Abrir menú" class="flex flex-col justify-center items-center space-y-1.5 md:hidden">
+        <span class="block w-6 h-0.5 bg-white rounded"></span>
+        <span class="block w-6 h-0.5 bg-white rounded"></span>
+        <span class="block w-6 h-0.5 bg-white rounded"></span>
+      </button>
+
+      <!-- MENÚ DE NAVEGACIÓN (escritorio) -->
+      <ul class="hidden md:flex space-x-8 text-white font-medium">
+        <li><a href="#inicio" class="hover:text-yellow-400 transition">INICIO</a></li>
+        <li><a href="#vision-mision" class="hover:text-yellow-400 transition">QUIENES SOMOS</a></li>
+        <li><a href="#carreras" class="hover:text-yellow-400 transition">CARRERAS</a></li>
+        <li><a href="#cursos" class="hover:text-yellow-400 transition">CURSOS</a></li>
+        <li><a href="#ubicacion" class="hover:text-yellow-400 transition">UBICACIÓN</a></li>
+        <li><a href="#contacto" class="hover:text-yellow-400 transition">CONTACTOS</a></li>
+      </ul>
+    </nav>
+
+    <!-- MENÚ MÓVIL -->
+    <div id="menuMovil" class="hidden flex-col bg-gradient-to-tl from-[#2c3e50] to-[#3498db] text-whiten">
+      <ul class="flex flex-col p-4 space-y-3 text-white text-lg font-medium">
+        <li><a href="#inicio" class="hover:text-yellow-400 transition">Inicio</a></li>
+        <li><a href="#vision-mision" class="hover:text-yellow-400 transition">Quiénes Somos</a></li>
+        <li><a href="#carreras" class="hover:text-yellow-400 transition">Carreras</a></li>
+        <li><a href="#cursos" class="hover:text-yellow-400 transition">Cursos</a></li>
+        <li><a href="#ubicacion" class="hover:text-yellow-400 transition">Ubicación</a></li>
+        <li><a href="#contacto" class="hover:text-yellow-400 transition">Contacto</a></li>
+      </ul>
+    </div>
+  </header>
+</body>
+</html>
