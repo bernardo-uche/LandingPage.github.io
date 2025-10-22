@@ -1,13 +1,29 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Instituto Tecnológico Jesús María</title>
+  <!-- SEO: Título más descriptivo -->
+  <title>Instituto Tecnológico Jesús María | Carreras Técnicas en Santa Cruz</title>
+  <!-- SEO: Meta Descripción -->
+  <meta name="description" content="Fórmate como profesional en el Instituto Tecnológico Jesús María en Santa Cruz. Ofrecemos carreras técnicas con alta demanda laboral como Sistemas Informáticos, Contabilidad y Secretariado Ejecutivo.">
   <!-- CDN de Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<link rel="stylesheet" href="css/style.css">
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+  </style>
+  
 
 </head>
 <body class="overflow-x-hidden font-sans">
@@ -18,7 +34,8 @@
       
       <!-- LOGO + TEXTO -->
       <div class="flex items-center space-x-3">
-        <img src="img/logo.jpeg" alt="Logo" class="w-12 h-12 rounded-full border-2 border-white" />
+        <!-- SEO: Alt text más descriptivo -->
+        <img src="img/logo.jpeg" alt="Logo del Instituto Tecnológico Jesús María" class="w-12 h-12 rounded-full border-2 border-white" />
         <div class="flex flex-col leading-tight text-white uppercase font-bold">
           <a href="index.html"><span class="text-xl font-bold uppercase tracking-wide text-white">Instituto Tecnológico Jesús María</span></a>
           
@@ -38,10 +55,9 @@
 
         <li class="group relative cursor-pointer">
         <a href="#vision-mision" class="hover:text-yellow-400 transition">QUIÉNES SOMOS ▾</a>
-        <ul
-          class="absolute hidden group-hover:flex flex-col bg-white text-gray-800 shadow-lg rounded-lg mt-2 min-w-[220px] overflow-hidden z-50">
-          <li><a href="#historia" class="block px-4 py-2 hover:bg-blue-100">Historia</a></li>
-          <li><a href="#vision-mision" class="block px-4 py-2 hover:bg-blue-100">Misión y Visión</a></li>
+        <ul class="absolute hidden group-hover:block bg-white text-gray-800 shadow-lg rounded-lg pt-4 min-w-[220px] z-50 opacity-0 group-hover:opacity-100 transform -translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+          <li><a href="prueba.html" class="block px-4 py-2 hover:bg-blue-100">Historia Misión y Visión</a></li>
+
           <li><a href="#plantel" class="block px-4 py-2 hover:bg-blue-100">Plantel Docente y Administrativo</a></li>
         </ul>
       </li>
@@ -49,11 +65,10 @@
 
         <li class="group relative cursor-pointer">
         <a href="#carreras" class="hover:text-yellow-400 transition">CARRERAS ▾</a>
-        <ul
-          class="absolute hidden group-hover:flex flex-col bg-white text-gray-800 shadow-lg rounded-lg mt-2 min-w-[220px] overflow-hidden z-50">
-          <li><a href="#sistemas" class="block px-4 py-2 hover:bg-blue-100">Sistemas Informáticos</a></li>
-          <li><a href="#secretariado" class="block px-4 py-2 hover:bg-blue-100">Secretariado Ejecutivo</a></li>
-          <li><a href="#contabilidad" class="block px-4 py-2 hover:bg-blue-100">Contabilidad</a></li>
+        <ul class="absolute hidden group-hover:block bg-white text-gray-800 shadow-lg rounded-lg pt-4 min-w-[220px] z-50 opacity-0 group-hover:opacity-100 transform -translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+          <li><a href="carreras/sistemas.html" class="block px-4 py-2 hover:bg-blue-100">Sistemas Informáticos</a></li>
+          <li><a href="carreras/secretariado.html" class="block px-4 py-2 hover:bg-blue-100">Secretariado Ejecutivo</a></li>
+          <li><a href="carreras/contabiduria.html" class="block px-4 py-2 hover:bg-blue-100">Contabilidad</a></li>
         </ul>
       </li>
 
@@ -81,7 +96,7 @@
       </li>
 
         <li><a href="#carreras" class="hover:text-yellow-400 transition">Carreras</a></li>
-        <li><a href="#cursos" class="hover:text-yellow-400 transition">Cursos</a></li>
+        <li><a href="pastoral2.html" class="hover:text-yellow-400 transition">Cursos</a></li>
         <li><a href="#ubicacion" class="hover:text-yellow-400 transition">Ubicación</a></li>
         <li><a href="#contacto" class="hover:text-yellow-400 transition">Contacto</a></li>
       </ul>
@@ -97,9 +112,10 @@
       <img src="img/imagen1.jpg" alt="Excelencia Académica" class="w-full h-full object-cover brightness-95" />
       <div class="absolute inset-0 bg-black/30 flex items-center justify-start px-10 md:px-20 animate-fadeIn">
         <div class="max-w-md">
-          <h2 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-yellow-300 via-orange-400 to-red-500 bg-clip-text text-transparent animate-gradientText">
+          <!-- SEO: Usar H1 como encabezado principal de la página -->
+          <h1 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-yellow-300 via-orange-400 to-red-500 bg-clip-text text-transparent animate-gradientText">
             Excelencia Académica
-          </h2>
+          </h1>
           <p class="text-lg md:text-xl text-white mt-3">
             Formamos profesionales del futuro con los más altos estándares educativos.
           </p>
@@ -199,26 +215,26 @@
         <h2>Nuestras Carreras</h2>
         <div class="programs-grid">
             <div class="program-card fade-in">
-                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Ingeniería">
+                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Estudiante de Sistemas Informáticos trabajando en un computador">
                 <div class="program-content">
                     <span class="program-badge">Carrera</span>
-                    <h3><b><a href="/carreras/sistema.html" style="color: inherit; text-decoration: none;">Sistema informatico</a></b></h3>
+                    <h3><b><a href="carreras/sistemas.html" style="color: inherit; text-decoration: none;">Sistema informatico</a></b></h3>
                     <p>Forma profesionales capaces de diseñar, desarrollar e implementar soluciones tecnológicas innovadoras. Duración: 3 años. Presencial .</p>
                 </div>
             </div>
             <div class="program-card fade-in">
-                <img src="https://images.unsplash.com/photo-1560472355-536de3962603?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Administración">
+                <img src="https://images.unsplash.com/photo-1560472355-536de3962603?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Persona trabajando en contabilidad con calculadora y documentos">
                 <div class="program-content">
                     <span class="program-badge">Carrera</span>
-                    <h3><b><a href="/carreras/contabiduria.html" style="color: inherit; text-decoration: none;">Contabiduria General</a></b></h3>
+                    <h3><b><a href="carreras/contabiduria.html" style="color: inherit; text-decoration: none;">Contabiduria General</a></b></h3>
                     <p>Desarrolla líderes empresariales con visión estratégica y habilidades gerenciales. Duración: 4 años. Enfoque en emprendimiento y gestión moderna.</p>
                 </div>
             </div>
             <div class="program-card fade-in">
-                <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Enfermería">
+                <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Profesional de secretariado ejecutivo organizando una agenda">
                 <div class="program-content">
                     <span class="program-badge">Carrera</span>
-                    <h3><b><a href="/carreras/secretariado.html" style="color: inherit; text-decoration: none;">Secretariado Ejecutivo</a></b> </h3>
+                    <h3><b><a href="carreras/secretariado.html" style="color: inherit; text-decoration: none;">Secretariado Ejecutivo</a></b> </h3>
                     <p>Forma profesionales en salud comprometidos con el cuidado integral del ser humano. Duración: 4 años. Prácticas en hospitales reconocidos.</p>
                 </div>
             </div>
@@ -318,7 +334,7 @@
                 <button type="submit" class="submit-btn">Enviar Solicitud</button>
                 <div class="whatsapp-button">
 
-                    <a href="https://wa.me/59177463268?text=Hola,%20Quiero%20información%20sobre%20las%20en%20carreras" target="_blank" title="Enviar mensaje por WhatsApp">
+                    <a href="https://api.whatsapp.com/send?phone=59172602881&text=Mas%20informaci%C3%B3n%20sobre%20las carreras%20por%20favor." target="_blank" title="Enviar mensaje por WhatsApp">
                         <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp" />
                         <span>Escríbenos por WhatsApp</span>
                     </a>

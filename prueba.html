@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reseña Histórica</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-in-up {
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    .timeline-item {
+      opacity: 0;
+      transform: translateX(-30px);
+      transition: all 0.6s ease-out;
+    }
+
+    .timeline-item.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+
+    .card-hover:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    body {
+      background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
+      min-height: 100vh;
+    }
+  </style>
+</head>
+
+<body class="font-sans text-gray-800">
+     <header class="fixed top-0 left-0 right-0 z-50 shadow-lg bg-gradient-to-r from-[#2c3e50] to-[#3498db] text-white">
+    <nav class="flex justify-between items-center w-full px-6 py-3">
+      
+      <!-- LOGO + TEXTO -->
+      <div class="flex items-center space-x-3">
+        <!-- SEO: Alt text más descriptivo -->
+        <img src="img/logo.jpeg" alt="Logo del Instituto Tecnológico Jesús María" class="w-12 h-12 rounded-full border-2 border-white" />
+        <div class="flex flex-col leading-tight text-white uppercase font-bold">
+          <a href="index.html"><span class="text-xl font-bold uppercase tracking-wide text-white">Instituto Tecnológico Jesús María</span></a>
+          
+        </div>
+      </div>
+
+      <!-- BOTÓN HAMBURGUESA (solo móvil) -->
+      <button id="hamburguesa" aria-label="Abrir menú" class="flex flex-col justify-center items-center space-y-1.5 md:hidden">
+        <span class="block w-6 h-0.5 bg-white rounded"></span>
+        <span class="block w-6 h-0.5 bg-white rounded"></span>
+        <span class="block w-6 h-0.5 bg-white rounded"></span>
+      </button>
+
+      <!-- MENÚ DE NAVEGACIÓN (escritorio) -->
+      <ul class="hidden md:flex space-x-8 text-white font-medium">
+        <li><a href="#inicio" class="hover:text-yellow-400 transition">INICIO</a></li>
+
+        <li class="group relative cursor-pointer">
+        <a href="#vision-mision" class="hover:text-yellow-400 transition">QUIÉNES SOMOS ▾</a>
+        <ul class="absolute hidden group-hover:block bg-white text-gray-800 shadow-lg rounded-lg pt-4 min-w-[220px] z-50 opacity-0 group-hover:opacity-100 transform -translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+          <li><a href="#vision-mision" class="block px-4 py-2 hover:bg-blue-100"> Historia <br>Misión y Visión</a></li>
+          <li><a href="#plantel" class="block px-4 py-2 hover:bg-blue-100">Plantel Docente y Administrativo</a></li>
+        </ul>
+      </li>
+
+
+        <li class="group relative cursor-pointer">
+        <a href="#carreras" class="hover:text-yellow-400 transition">CARRERAS ▾</a>
+        <ul class="absolute hidden group-hover:block bg-white text-gray-800 shadow-lg rounded-lg pt-4 min-w-[220px] z-50 opacity-0 group-hover:opacity-100 transform -translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+          <li><a href="carreras/sistemas.html" class="block px-4 py-2 hover:bg-blue-100">Sistemas Informáticos</a></li>
+          <li><a href="carreras/secretariado.html" class="block px-4 py-2 hover:bg-blue-100">Secretariado Ejecutivo</a></li>
+          <li><a href="carreras/contabiduria.html" class="block px-4 py-2 hover:bg-blue-100">Contabilidad</a></li>
+        </ul>
+      </li>
+
+
+        <li><a href="pastoral2.html" class="hover:text-yellow-400 transition">PASTORAL</a></li>
+        <li><a href="#ubicacion" class="hover:text-yellow-400 transition">UBICACIÓN</a></li>
+        <li><a href="#contacto" class="hover:text-yellow-400 transition">CONTACTOS</a></li>
+      </ul>
+    </nav>
+
+    <!-- MENÚ MÓVIL -->
+    <div id="menuMovil" class="hidden flex-col bg-gradient-to-tl from-[#2c3e50] to-[#3498db] text-whiten">
+      <ul class="flex flex-col p-4 space-y-3 text-white text-lg font-medium">
+        <li><a href="#inicio" class="hover:text-yellow-400 transition">Inicio</a></li>
+        
+        <li>
+        <details class="group">
+          <summary class="cursor-pointer hover:text-yellow-400 transition">Quiénes Somos</summary>
+          <ul class="pl-4 mt-2 space-y-2 text-sm">
+            <li><a href="#historia" class="block hover:text-yellow-300">Historia</a></li>
+            <li><a href="#vision-mision" class="block hover:text-yellow-300">Misión y Visión</a></li>
+            <li><a href="#plantel" class="block hover:text-yellow-300">Plantel Docente y Administrativo</a></li>
+          </ul>
+        </details>
+      </li>
+
+        <li><a href="#carreras" class="hover:text-yellow-400 transition">Carreras</a></li>
+        <li><a href="pastoral2.html" class="hover:text-yellow-400 transition">Cursos</a></li>
+        <li><a href="#ubicacion" class="hover:text-yellow-400 transition">Ubicación</a></li>
+        <li><a href="#contacto" class="hover:text-yellow-400 transition">Contacto</a></li>
+      </ul>
+    </div>
+  </header>
+  <main class="container mx-auto px-4 py-12 max-w-6xl">
+    <!-- Título -->
+    <!-- SECCIÓN HISTORIA -->
+<section id="historia" class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center px-6 py-12 bg-white shadow-lg rounded-xl mt-24">
+  <!-- Imagen que cubre todo el alto -->
+  <div class="h-full">
+    <img 
+      src="img/itjm.webp" 
+      alt="Instituto Jesús María" 
+      class="w-full h-full object-cover rounded-lg shadow-lg max-h-[700px] md:max-h-[800px]" 
+    />
+  </div>
+
+  <!-- Texto descriptivo -->
+  <div>
+    <h2 class="text-3xl font-bold text-[#2c3e50] mb-4 text-center md:text-left">Nuestra Historia</h2>
+    <p class="text-gray-700 leading-relaxed mb-3">
+      AQUI VIENE LA HISTORIA DEL INSTITUTO. <br>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt voluptas fugit explicabo, nostrum facere neque amet in molestiae officiis, maiores repudiandae magni laborum. Est, vitae necessitatibus vel doloremque facere quae.
+    </p>
+    <p class="text-gray-700 leading-relaxed mb-3">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum minus nesciunt ea, aperiam illum repellendus. Amet quas, qui suscipit iste animi, quo ullam sequi ex nam, natus culpa aperiam quisquam!
+    </p>
+    <p class="text-gray-700 leading-relaxed mb-3">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, eligendi nostrum neque aspernatur autem impedit dolorum, excepturi reiciendis cumque, quaerat voluptatem sint. Dolor iure officia ullam culpa temporibus ducimus voluptatum?
+    </p>
+    <p class="text-gray-700 leading-relaxed">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, enim cupiditate laudantium aspernatur tempora repellat nesciunt modi impedit officia aliquid similique minus nihil iure ab itaque voluptate maiores dicta harum?
+    </p>
+  </div>
+</section>
+
+<!-- SECCIÓN MISIÓN Y VISIÓN -->
+<section id="vision-mision" class="bg-gradient-to-r from-[#3498db] to-[#2c3e50] text-white py-16 mt-16">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <h2 class="text-3xl font-bold mb-12 uppercase tracking-wider">MISIÓN Y VISIÓN</h2>
+    <div class="grid md:grid-cols-2 gap-10">
+      <div class="bg-white text-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition">
+        <h3 class="text-2xl font-semibold mb-4 text-[#2c3e50]">Misión</h3>
+        <p class="text-gray-700 leading-relaxed">
+          Formar profesionales hombres y mujeres identificados con su realidad Sociocultural, imbuidos de principios y valores cristianos , altamente capacitados para responder a las demandas de la comunidad, contribuyendo asi al desarrollo de la región del pais
+        </p>
+      </div>
+      <div class="bg-white text-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition">
+        <h3 class="text-2xl font-semibold mb-4 text-[#2c3e50]">Visión</h3>
+        <p class="text-gray-700 leading-relaxed">
+          Fortalecer el sistema educativo superior estatal, dando capacitación integral a un costo económico que responda a las necesidades de las familias Bolivianas.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECCIÓN VALORES -->
+<section id="valores" class="py-16 bg-white">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <h2 class="text-3xl font-bold text-[#2c3e50] mb-12 uppercase tracking-wider">VALORES INSTITUCIONALES</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-[#f7f9fa] p-6 rounded-xl shadow-md hover:shadow-xl transition">
+        <h3 class="text-xl font-semibold text-[#2c3e50] mb-3">Respeto</h3>
+        <p class="text-gray-700 leading-relaxed">
+          Promovemos la aceptación y valoración de cada persona como ser único, fomentando un ambiente de convivencia armónica.
+        </p>
+      </div>
+      <div class="bg-[#f7f9fa] p-6 rounded-xl shadow-md hover:shadow-xl transition">
+        <h3 class="text-xl font-semibold text-[#2c3e50] mb-3">Responsabilidad</h3>
+        <p class="text-gray-700 leading-relaxed">
+          Asumimos nuestros compromisos académicos y personales con disciplina, esfuerzo y compromiso social.
+        </p>
+      </div>
+      <div class="bg-[#f7f9fa] p-6 rounded-xl shadow-md hover:shadow-xl transition">
+        <h3 class="text-xl font-semibold text-[#2c3e50] mb-3">Solidaridad</h3>
+        <p class="text-gray-700 leading-relaxed">
+          Fomentamos la empatía y la ayuda mutua, inspirados en el ejemplo de Santa Claudina Thévenet.
+        </p>
+      </div>
+      <div class="bg-[#f7f9fa] p-6 rounded-xl shadow-md hover:shadow-xl transition">
+        <h3 class="text-xl font-semibold text-[#2c3e50] mb-3">Honestidad</h3>
+        <p class="text-gray-700 leading-relaxed">
+          Actuamos con sinceridad, transparencia y coherencia entre lo que pensamos, decimos y hacemos.
+        </p>
+      </div>
+      <div class="bg-[#f7f9fa] p-6 rounded-xl shadow-md hover:shadow-xl transition">
+        <h3 class="text-xl font-semibold text-[#2c3e50] mb-3">Fe</h3>
+        <p class="text-gray-700 leading-relaxed">
+          Vivimos y transmitimos los valores cristianos como base de nuestra identidad institucional.
+        </p>
+      </div>
+      <div class="bg-[#f7f9fa] p-6 rounded-xl shadow-md hover:shadow-xl transition">
+        <h3 class="text-xl font-semibold text-[#2c3e50] mb-3">Compromiso</h3>
+        <p class="text-gray-700 leading-relaxed">
+          Participamos activamente en el crecimiento personal, institucional y comunitario con dedicación y entusiasmo.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+        <p>&copy; 2025 Instituto de Educación Superior. Todos los derechos reservados.</p>
+        <p>Formando profesionales para el futuro | Santa Cruz, Bolivia</p>
+    </footer>
+
+  <script>
+    // Animación de la línea de tiempo
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll(".timeline-item").forEach(item => observer.observe(item));
+  </script>
+</body>
+</html>

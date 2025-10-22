@@ -5,15 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styleP.css">
+    <link rel="shortcut icon" href="img/logo/logo.ico" type="image/x-icon" />
 </head>
 <body>
-    <!-- HEADER -->
+   <!-- HEADER -->
   <header class="fixed top-0 left-0 right-0 z-50 shadow-lg bg-gradient-to-r from-[#2c3e50] to-[#3498db] text-white">
     <nav class="flex justify-between items-center w-full px-6 py-3">
       
       <!-- LOGO + TEXTO -->
       <div class="flex items-center space-x-3">
-        <img src="img/logo.jpeg" alt="Logo" class="w-12 h-12 rounded-full border-2 border-white" />
+        <!-- SEO: Alt text más descriptivo -->
+        <img src="img/logo.jpeg" alt="Logo del Instituto Tecnológico Jesús María" class="w-12 h-12 rounded-full border-2 border-white" />
         <div class="flex flex-col leading-tight text-white uppercase font-bold">
           <a href="index.html"><span class="text-xl font-bold uppercase tracking-wide text-white">Instituto Tecnológico Jesús María</span></a>
           
@@ -30,25 +33,148 @@
       <!-- MENÚ DE NAVEGACIÓN (escritorio) -->
       <ul class="hidden md:flex space-x-8 text-white font-medium">
         <li><a href="#inicio" class="hover:text-yellow-400 transition">INICIO</a></li>
-        <li><a href="#vision-mision" class="hover:text-yellow-400 transition">QUIENES SOMOS</a></li>
-        <li><a href="#carreras" class="hover:text-yellow-400 transition">CARRERAS</a></li>
-        <li><a href="#cursos" class="hover:text-yellow-400 transition">CURSOS</a></li>
+
+        <li class="group relative cursor-pointer">
+          <a href="#vision-mision" class="hover:text-yellow-400 transition">QUIÉNES SOMOS ▾</a>
+          <ul class="absolute hidden group-hover:block bg-white text-gray-800 shadow-lg rounded-lg pt-4 min-w-[220px] z-50 opacity-0 group-hover:opacity-100 transform -translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+            <li><a href="#vision-mision" class="block px-4 py-2 hover:bg-blue-100">Historia Misión y Visión</a></li>
+            <li><a href="#plantel" class="block px-4 py-2 hover:bg-blue-100">Plantel Docente y Administrativo</a></li>
+        </ul>
+      </li>
+
+
+        <li class="group relative cursor-pointer">
+          <a href="#carreras" class="hover:text-yellow-400 transition">CARRERAS ▾</a>
+          <ul class="absolute hidden group-hover:block bg-white text-gray-800 shadow-lg rounded-lg pt-4 min-w-[220px] z-50 opacity-0 group-hover:opacity-100 transform -translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+            <li><a href="sistemas.html" class="block px-4 py-2 hover:bg-blue-100">Sistemas Informáticos</a></li>
+            <li><a href="secretariado.html" class="block px-4 py-2 hover:bg-blue-100">Secretariado Ejecutivo</a></li>
+            <li><a href="contabiduria.html" class="block px-4 py-2 hover:bg-blue-100">Contabilidad</a></li>
+        </ul>
+      </li>
+
+
+        <li><a href="../pastoral2.html" class="hover:text-yellow-400 transition">PASTORAL</a></li>
         <li><a href="#ubicacion" class="hover:text-yellow-400 transition">UBICACIÓN</a></li>
         <li><a href="#contacto" class="hover:text-yellow-400 transition">CONTACTOS</a></li>
       </ul>
     </nav>
-
     <!-- MENÚ MÓVIL -->
     <div id="menuMovil" class="hidden flex-col bg-gradient-to-tl from-[#2c3e50] to-[#3498db] text-whiten">
       <ul class="flex flex-col p-4 space-y-3 text-white text-lg font-medium">
         <li><a href="#inicio" class="hover:text-yellow-400 transition">Inicio</a></li>
-        <li><a href="#vision-mision" class="hover:text-yellow-400 transition">Quiénes Somos</a></li>
+        
+        <li>
+        <details class="group">
+          <summary class="cursor-pointer hover:text-yellow-400 transition">Quiénes Somos</summary>
+          <ul class="pl-4 mt-2 space-y-2 text-sm">
+            <li><a href="../prueba.html" class="block hover:text-yellow-300">Historia</a></li>
+            <li><a href="#vision-mision" class="block hover:text-yellow-300">Misión y Visión</a></li>
+            <li><a href="#plantel" class="block hover:text-yellow-300">Plantel Docente y Administrativo</a></li>
+          </ul>
+        </details>
+      </li>
+
         <li><a href="#carreras" class="hover:text-yellow-400 transition">Carreras</a></li>
-        <li><a href="#cursos" class="hover:text-yellow-400 transition">Cursos</a></li>
+        <li><a href="../pastoral2.html" class="hover:text-yellow-400 transition">Cursos</a></li>
         <li><a href="#ubicacion" class="hover:text-yellow-400 transition">Ubicación</a></li>
         <li><a href="#contacto" class="hover:text-yellow-400 transition">Contacto</a></li>
       </ul>
     </div>
-  </header>
+  </header>  <!-- ====== CONTENIDO PRINCIPAL (tu contenido original) ====== -->
+  <main class="pt-9">
+    <!-- Sección Congregación -->
+    <section id="inicio" class="max-w-6xl mx-auto text-center px-6 py-20">
+      <h1 class="text-3xl md:text-4xl font-bold text-[#2c3e50] border-b-4 border-[#3498db] inline-block pb-2">
+        RELIGIOSAS JESÚS MARÍA
+      </h1>
+      <p class="text-gray-600 mt-4 text-lg">
+        Generoso eres padre celestial por permitir conocerte por medio del esfuerzo<br />
+        de Santa Claudina Thévenet por eso siempre te estaré agradecido.
+      </p>
+
+      <div class="mt-10 flex flex-wrap justify-center gap-10">
+        <div class="max-w-xs text-center">
+          <img src="img/imagen1.jpg" alt="Filosofía" class="w-64 h-64 rounded-full object-cover border-4 border-[#3498db] mx-auto shadow-lg" />
+          <h3 class="mt-4 text-xl font-semibold text-[#2c3e50]">Filosofía</h3>
+          <p class="text-gray-600 mt-2">Agradecemos a Dios por la infinita misericordia, por el amor que depositó en Claudina.</p>
+        </div>
+        <div class="max-w-xs text-center">
+          <img src="img/claudina.jpg" alt="Misión" class="w-64 h-64 rounded-full object-cover border-4 border-[#3498db] mx-auto shadow-lg" />
+          <h3 class="mt-4 text-xl font-semibold text-[#2c3e50]">Misión</h3>
+          <p class="text-gray-600 mt-2">Fundadora de la Congregación de Religiosas Jesús María.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Historia -->
+    <section id="historia" class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center px-6 py-12 bg-white shadow-lg rounded-xl mt-24">
+  <div>
+    <img src="https://www.rjmgeneral.org/wp-content/uploads/2014/07/oRACION-cLAUDINA-729x1024.jpg" alt="Claudina Thévenet" class="rounded-lg shadow-lg w-full object-cover max-h-[500px]" />
+  </div>
+  <div>
+    <h2 class="text-3xl font-bold text-[#2c3e50] mb-4 text-center md:text-left">HISTORIA DE CLAUDINA THÉVENET</h2>
+    <p class="text-gray-700 leading-relaxed mb-3">
+      Claudina Thévenet (1774-1837) fue una religiosa francesa, fundadora de la Congregación de Jesús-María. Nació en Lyon durante un período de gran turbulencia social y política en Francia.
+    </p>
+    <p class="text-gray-700 leading-relaxed mb-3">
+      Desde muy joven, Claudina mostró una profunda sensibilidad hacia los más necesitados. Su vida cambió radicalmente cuando presenció la ejecución de sus dos hermanos durante la Revolución Francesa, experiencia que marcó profundamente su vocación de servicio.
+    </p>
+    <p class="text-gray-700 leading-relaxed mb-3">
+      Dedicó su vida a la educación de niñas y jóvenes en situación de vulnerabilidad, fundando escuelas y centros de formación. Su carisma se centró en la educación integral de la persona, combinando la formación académica con la espiritual.
+    </p>
+    <p class="text-gray-700 leading-relaxed">
+      Fue beatificada por el Papa Juan Pablo II en 1981 y canonizada en 1993, convirtiéndose en Santa Claudina Thévenet. Su legado continúa inspirando la labor educativa en instituciones de todo el mundo.
+    </p>
+  </div>
+</section>
+
+    <div class="text-center italic font-semibold text-[#2c3e50] mt-6">
+      “JÓVENES CAMINANDO CON CLAUDINA”
+    </div>
+
+    <!-- Carrusel 3D -->
+    <section class="text-center py-16">
+      <h2 class="text-3xl font-bold text-[#2c3e50] mb-10">Nuestra Comunidad</h2>
+      <div class="content-all">
+        <div class="content-carrousel">
+          <figure><img src="img/imagen2.jpg" /></figure>
+          <figure><img src="img/imagen4.jpg" /></figure>
+          <figure><img src="img/imagen3.jpg" /></figure>
+          <figure><img src="img/imagen1.jpg" /></figure>
+          <figure><img src="img/imagen2.jpg" /></figure>
+          <figure><img src="img/imagen4.jpg" /></figure>
+          <figure><img src="img/imagen3.jpg" /></figure>
+          <figure><img src="img/imagen1.jpg" /></figure>
+          <figure><img src="img/imagen2.jpg" /></figure>
+          <figure><img src="img/imagen4.jpg" /></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Convenios -->
+    <section id="convenios" class="py-32">
+      <h2 class="text-3xl font-bold text-center text-[#2c3e50] mb-10">Nuestros Convenios</h2>
+      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto px-6">
+        <div class="text-center hover:scale-105 transition">
+          <img src="img/cumbre.jpg" alt="Universidad Cumbre" class="mx-auto rounded-lg shadow-md w-48 h-48 object-contain" />
+          <h3 class="mt-4 text-xl font-semibold text-[#2c3e50]">Universidad Cumbre</h3>
+        </div>
+        <div class="text-center hover:scale-105 transition">
+          <img src="img/utepsa.jpg" alt="UTEPSA" class="mx-auto rounded-lg shadow-md w-48 h-48 object-contain" />
+          <h3 class="mt-4 text-xl font-semibold text-[#2c3e50]">Universidad UTEPSA</h3>
+        </div>
+        <div class="text-center hover:scale-105 transition">
+          <img src="img/catolica.png" alt="Universidad Católica" class="mx-auto rounded-lg shadow-md w-48 h-48 object-contain" />
+          <h3 class="mt-4 text-xl font-semibold text-[#2c3e50]">Universidad Católica</h3>
+        </div>
+      </div>
+    </section>
+  </main>
+
+    <footer>
+        <p>&copy; 2025 Instituto de Educación Superior. Todos los derechos reservados.</p>
+        <p>Formando profesionales para el futuro | Santa Cruz, Bolivia</p>
+    </footer>
 </body>
+<script src="js/javascripr.js"></script>
 </html>
