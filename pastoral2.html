@@ -8,6 +8,176 @@
     <link rel="stylesheet" href="css/styleP.css">
     <link rel="shortcut icon" href="img/logo/logo.ico" type="image/x-icon" />
 </head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+
+/*CSS TAIWILN */
+@media (min-width: 768px) {
+  header ul li.group ul {
+    display: none;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+  }
+
+  header ul li.group:hover ul {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+    /* Footer */
+    footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 5rem; /* 👈 Espacio arriba del footer */
+}
+
+
+/*CARRUSEL*/
+
+.content-all{
+    --carousel-width: 100px;
+    --carousel-height: 60px;
+    --translate-z: 150px;
+    --animation-duration: 10s;
+}
+
+.content-all{
+    width: var(--carousel-width);
+    margin: auto;
+    perspective: 1500px;
+    position: relative;
+    margin-top: 10px;
+    
+}
+.content-carrousel{
+    width: 100%;
+    position: absolute;
+    animation: rotar var(--animation-duration) infinite linear;
+    transform-style: preserve-3d;
+}
+.content-carrousel:hover{
+    animation-play-state: paused;
+    cursor: pointer;
+}
+.content-carrousel figure{
+    width: 100%;
+    height: var(--carousel-height);
+    overflow: hidden;
+     position: absolute;
+     box-shadow: 0px 0px 10px 0px black;
+    transition: all 100ms;
+    top: 10px;
+}
+
+.diese{
+           background-image: url("../images/w101.jpg");
+           background-size: 80vh;
+        
+      }
+.content-carrousel figure:hover{
+    box-shadow: none;
+    transition: all 100ms;
+   
+}
+
+.content-carrousel figure:nth-child(1){transform: rotateY(0deg)
+    translateZ(var(--translate-z));}
+.content-carrousel figure:nth-child(2){transform: rotateY(40deg)
+    translateZ(var(--translate-z));}
+.content-carrousel figure:nth-child(3){transform: rotateY(80deg)
+    translateZ(var(--translate-z));}
+.content-carrousel figure:nth-child(4){transform: rotateY(120deg)
+    translateZ(var(--translate-z));}
+.content-carrousel figure:nth-child(5){transform: rotateY(160deg)
+    translateZ(var(--translate-z));}
+.content-carrousel figure:nth-child(6){transform: rotateY(200deg)
+    translateZ(var(--translate-z));}
+.content-carrousel figure:nth-child(7){transform: rotateY(240deg)
+    translateZ(var(--translate-z));}
+.content-carrousel figure:nth-child(8){transform: rotateY(280deg)
+    translateZ(var(--translate-z));}
+.content-carrousel figure:nth-child(9){transform: rotateY(320deg)
+    translateZ(var(--translate-z));}
+.content-carrousel figure:nth-child(10){transform: rotateY(360deg)
+    translateZ(var(--translate-z));}
+.content-carrousel figure:nth-child(11){transform: rotateY(360deg)
+    translateZ(var(--translate-z));}
+.content-carrousel figure:nth-child(12){transform: rotateY(360deg)
+    translateZ(var(--translate-z));}
+
+.content-carrousel img{
+    width: 100%;
+     transition: all 1000ms;
+}
+.content-carrousel img:hover{
+    transform: scale(1.1);
+    transition: all 500ms;
+     
+}
+@keyframes rotar{
+    from{
+        transform: rotateY(0deg);
+    }to{
+        transform: rotateY(360deg);
+    }
+     
+}
+@media (min-width: 480px){
+     .content-all{
+        --carousel-width: 150px;
+        --carousel-height: 110px;
+        --translate-z: 250px;
+        --animation-duration: 20s;
+    }
+     .diese{
+            background-image: url("../images/w101.jpg");
+           background-size: 180vh;
+          height: 500px;
+      }
+}
+@media (min-width: 1024px){
+    .content-all{
+        --carousel-width: 200px;
+        --translate-z: 300px;
+    }
+     .diese{
+           background-image: url("../img/claudina.jpg");
+           background-size: 220vh;
+          height: 600px;
+      }
+    
+}
+.img_plantel {
+    width: 10%;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+.animate-fadeIn {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.animate-gradientText {
+  background-size: 200% 200%;
+  animation: gradientFlow 4s ease infinite;
+}
+    </style>
 <body>
    <!-- HEADER -->
   <header class="fixed top-0 left-0 right-0 z-50 shadow-lg bg-gradient-to-r from-[#2c3e50] to-[#3498db] text-white">
@@ -178,3 +348,4 @@
 </body>
 <script src="js/javascripr.js"></script>
 </html>
+
